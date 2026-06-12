@@ -1,0 +1,21 @@
+{
+  "appId": "com.cloudsaver.app",
+  "productName": "CloudSaver",
+  "directories": {
+    "output": "dist"
+  },
+  "win": {
+    "target": [
+      "nsis",
+      "portable"
+    ],
+    "icon": "resources/icon.ico"
+  },
+  "files": [
+    "out/**/*",
+    "resources/**/*"
+  ],
+  "buildDependenciesFromSource": false,
+  "nodeGypRebuild": false,
+  "npmRebuild": false
+}

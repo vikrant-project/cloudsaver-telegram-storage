@@ -1,0 +1,15 @@
+.st-root { animation: fadeInUp 0.3s ease both; }
+.st-root h1 { margin: 0 0 18px; font-size: 24px; letter-spacing: -0.3px; }
+.st-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 18px; }
+.st-card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; backdrop-filter: blur(20px); }
+.st-card-label { color: var(--text-dim); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+.st-card-value { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; margin-top: 4px; }
+.st-card-value.small { font-size: 14px; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.st-card-sub { font-size: 11px; color: var(--text-mute); margin-top: 4px; }
+.st-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px; margin-bottom: 18px; }
+.st-panel { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; backdrop-filter: blur(20px); }
+.st-panel h2 { margin: 0 0 14px; font-size: 16px; font-weight: 600; }
+.st-table { width: 100%; border-collapse: collapse; }
+.st-table th, .st-table td { padding: 9px 12px; text-align: left; border-bottom: 1px solid var(--border); font-size: 13px; }
+.st-table th { color: var(--text-dim); font-weight: 500; text-transform: uppercase; font-size: 11px; }
+.st-table .ellip { max-width: 420px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

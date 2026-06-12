@@ -1,0 +1,18 @@
+CloudSaver v2.0.0 build log
+Built: Jan 2026
+Toolchain: Node 22, Yarn 1.22, Electron 33, electron-builder 25, Wine 10.0
+Output:
+  CloudSaver Setup 2.0.0.exe   (103 MB, x64 NSIS installer)
+
+V2 FEATURES SUMMARY
+===================
+Real-time progress: throttled IPC (100ms guard), live bytes/sec, ETA,
+useReducer-based hook for 60fps repaints, aggregate header + floating tray.
+12 new pages: Trash, Favorites, Shared Links, Activity Log, Tags, Search,
+Calendar (heatmap), Albums, Notes, Network, Diagnostics, Help.
+Command palette: Ctrl+Shift+P; Ctrl+K opens Search.
+Collapsible sidebar with v2 brand + animated active indicator.
+v3-theme.css: darker base, dual gradients, film grain, glass cards, springs,
+shimmer progress, skeletons, animated checkmark.
+Local store backing trash/favorites/shared/activity/tags/notes/albums/meta/prefs.
+JetBrains Mono for numerics. Lucide icons throughout (no emoji).

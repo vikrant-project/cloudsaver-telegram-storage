@@ -1,0 +1,23 @@
+.v2-sidebar { width: 240px; background: var(--panel); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid var(--border); display: flex; flex-direction: column;
+  padding: 22px 14px; flex-shrink: 0; }
+.v2-sidebar-head { display: flex; align-items: center; gap: 12px; padding: 0 8px 24px; border-bottom: 1px solid var(--border); margin-bottom: 18px; }
+.v2-sidebar-logo { width: 40px; height: 40px; border-radius: 12px; background: var(--accent);
+  display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; letter-spacing: -1px; }
+.v2-sidebar-title { display: flex; flex-direction: column; }
+.v2-sidebar-brand { font-weight: 700; font-size: 16px; letter-spacing: -0.3px; }
+.v2-sidebar-badge { font-size: 10px; padding: 2px 6px; border-radius: 99px; background: rgba(124,131,255,0.18); color: var(--accent-1); width: max-content; margin-top: 2px; }
+.v2-sidebar-nav { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.v2-sidebar-link { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 10px;
+  color: var(--text-dim); text-decoration: none; font-size: 14px; transition: background-color 0.15s, color 0.15s; }
+.v2-sidebar-link:hover { background: rgba(255,255,255,0.04); color: var(--text); }
+.v2-sidebar-link.active { background: rgba(124,131,255,0.12); color: var(--text); }
+.v2-sidebar-link.active::before { content: ''; position: absolute; }
+.v2-sidebar-foot { border-top: 1px solid var(--border); padding-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+.v2-sidebar-channel { padding: 8px 10px; border-radius: 10px; background: rgba(255,255,255,0.03); }
+.v2-sidebar-channel-name { font-size: 13px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.v2-sidebar-channel-sub { font-size: 11px; color: var(--ok); }
+.v2-sidebar-logout { display: flex; align-items: center; gap: 8px; padding: 9px 12px; background: transparent;
+  border: 1px solid var(--border); color: var(--text-dim); border-radius: 10px; cursor: pointer; font-size: 13px; }
+.v2-sidebar-logout:hover { color: var(--err); border-color: var(--err); }
+body.compact .v2-sidebar { width: 200px; }

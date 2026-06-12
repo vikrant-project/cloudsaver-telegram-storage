@@ -1,0 +1,63 @@
+:root {
+  --bg-0: #07080f;
+  --bg-1: #0d0f1a;
+  --bg-2: #131628;
+  --panel: rgba(20, 22, 38, 0.72);
+  --panel-2: rgba(28, 30, 52, 0.55);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --text: #e8eaf6;
+  --text-dim: #9ca3c4;
+  --text-mute: #6b7395;
+  --accent: linear-gradient(135deg, #7c83ff 0%, #5a44d4 50%, #b14aff 100%);
+  --accent-1: #7c83ff;
+  --accent-2: #b14aff;
+  --ok: #4ed3a8;
+  --warn: #ffb84d;
+  --err: #ff6b7a;
+}
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: radial-gradient(1200px 800px at 0% 0%, #1a1640 0%, transparent 50%),
+              radial-gradient(900px 700px at 100% 100%, #2b1248 0%, transparent 50%),
+              var(--bg-0);
+  color: var(--text);
+  overflow: hidden;
+}
+.app-container { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(12px) } to { opacity: 1; transform: none } }
+@keyframes pulse { 0%, 100% { opacity: 1 } 50% { opacity: 0.55 } }
+@keyframes shimmer { 0% { background-position: -400px 0 } 100% { background-position: 400px 0 } }
+@keyframes spin { to { transform: rotate(360deg) } }
+.spin { animation: spin 1s linear infinite; }
+body.reduce-anim *, body.reduce-anim *::before, body.reduce-anim *::after {
+  animation-duration: 0.001s !important; transition-duration: 0.001s !important;
+}
+
+/* Splash */
+.splash-root { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.splash-bg { position: absolute; inset: 0;
+  background: conic-gradient(from 230deg at 50% 50%, #1a1640, #2b1248, #1a1640);
+  filter: blur(60px); opacity: 0.6; animation: pulse 4s ease-in-out infinite; }
+.splash-inner { position: relative; text-align: center; animation: fadeInUp 0.6s ease both; }
+.splash-logo { display: inline-flex; }
+.splash-logo-mark { width: 88px; height: 88px; border-radius: 24px;
+  background: var(--accent); display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 36px; letter-spacing: -1px; box-shadow: 0 20px 60px rgba(124,131,255,0.4); }
+.splash-title { font-size: 36px; margin: 18px 0 4px; letter-spacing: -0.5px; }
+.splash-subtitle { color: var(--text-dim); margin: 0 0 28px; }
+.splash-progress { width: 280px; height: 4px; background: var(--border); border-radius: 99px; overflow: hidden; margin: 0 auto; }
+.splash-progress-fill { height: 100%; width: 40%; background: var(--accent);
+  border-radius: 99px; animation: splashSlide 1.6s ease-in-out infinite; }
+@keyframes splashSlide { 0% { transform: translateX(-100%); } 100% { transform: translateX(350%); } }
+.splash-loading { color: var(--text-dim); margin-top: 16px; font-size: 14px; }
+.splash-version { position: absolute; bottom: -120px; left: 50%; transform: translateX(-50%); color: var(--text-mute); font-size: 12px; }
+
+/* App shell */
+.v2-shell { display: flex; height: 100vh; width: 100%; }
+.v2-main { flex: 1; overflow: auto; padding: 28px 32px; }
+.v2-main::-webkit-scrollbar { width: 10px; }
+.v2-main::-webkit-scrollbar-track { background: transparent; }
+.v2-main::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 99px; }
